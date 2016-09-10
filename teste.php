@@ -37,6 +37,22 @@
                     {
                     printf("</p>\n<p>Alternativa marcada: %u",$alt);
                     }
+                    fila_pilha();
+                }
+            function fila_pilha()/*Funcionando corretamente para números*/
+                {
+                $fila = new SplQueue();
+                $pilha = new SplStack();
+                for($i=0;$i<15;++$i)
+                    {
+                    $fila->enqueue($i+1);
+                    $pilha->push($i+1);
+                    }
+                for($i=0;$i<15;++$i)
+                    {
+                    $fila->dequeue();
+                    $pilha->pop();
+                    }
                 }
         ?>
         </p>
