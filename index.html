@@ -9,15 +9,32 @@ and open the template in the editor.
         <title>Clínica Gattini</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            fieldset{
+                width: 500px;
+                border: 0;
+            }
+            p{
+                -webkit-margin-before: 5px;
+                -webkit-margin-after: 5px;
+            }
+        </style>
     </head>
     <body>
         <form action='teste.php' method="post">
-            <input type="text" name='usu' id='tUsu' placeholder="nome de usuário">
-            <input type='password' name="senha" id='tSenha' placeholder='Senha'>
-            <input type="radio" name="alt" value="1" id="altA">1
-            <input type="radio" name="alt" value="2" id="altB">2
-            <input type="radio" name="alt" value="3" id="altC">3
-            <input type="radio" name="alt" value="4" id="altD">4
+            <p><input type="text" name='usu' id='tUsu' placeholder="nome de usuário"></p>
+            <p><input type='password' name="senha" id='tSenha' placeholder='Senha'></p>
+            <fieldset>
+                <p><input type="radio" name="alt" value="1" id="altA">1</p>
+                <p><input type="radio" name="alt" value="2" id="altB">2</p>
+                <p><input type="radio" name="alt" value="3" id="altC">3</p>
+                <p><input type="radio" name="alt" value="4" id="altD">4</p>
+            </fieldset>
+            <fieldset>
+                <input type="checkbox" id="alt1" name='marca1' value='10'>10
+                <input type='checkbox' id='alt2' name='marca2' value='20'>20
+                <input type='checkbox' id='alt3' name='marca3' value='30'>30
+            </fieldset>
             <button type="submit" name="envio">Enviar</button>
         </form>
     </body>
